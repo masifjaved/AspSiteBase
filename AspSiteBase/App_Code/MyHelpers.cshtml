@@ -1,0 +1,16 @@
+﻿@helper getErrorMessage(string FieldName, string Message)
+{
+    if (FieldName.IsEmpty() && IsPost)
+    {
+        <span class="help-block text-danger">@Message</span>
+    }
+}
+
+
+@helper HasError(string FieldName)
+{
+    if (FieldName.IsEmpty() && IsPost)
+    {
+        @("has-error")
+    }
+}

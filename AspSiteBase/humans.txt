@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    <Asif Javed> -- <Software Engineer> -- <twitter>
+
+# THANKS
+
+    <Asif>
+
+# TECHNOLOGY COLOPHON
+
+    Asp.net, C#, SQLServer, HTML5, CSS3
+    Normalize.css, jQuery, Modernizr

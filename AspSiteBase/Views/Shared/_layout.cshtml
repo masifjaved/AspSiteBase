@@ -1,0 +1,70 @@
+﻿@{
+    var act = ViewContext.RouteData.Values["Action"].ToString().ToLower();
+    var contr = ViewContext.RouteData.Values["Controller"].ToString().ToLower();
+}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+ <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>@ViewBag.Title</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Nova+Square' rel='stylesheet' type='text/css'>
+    @Styles.Render("~/Content/css")
+
+    @RenderSection("head", required: false)
+
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="@(contr)_@act">
+    <div class="wrap">
+        <div class="header">
+            <header>
+                <div class="header">
+                    <a href="/" class="logo"></a>
+                    <nav>
+                        <ul class="topNav">
+                            <li class="sm index @( ( act == "index") ? "active" : "")"><a href='@(Url.Action("Index", "Home"))'><span>Home</span></a></li>
+                            <li class="gallery @( ( act == "gallery" ) ? "active" : "")"><a href='@(Url.Action("Gallery", "Home"))'><span>Gallery</span></a></li>
+                            <li class="contact @( ( act == "contact" ) ? "active" : "")"><a href='@(Url.Action("Contact", "Home"))'><span>Contact</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </div>
+        <div class="topBar"></div>
+        <div class="bodyArea">
+            @RenderBody()
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="wrap">
+                <address>
+                    <div class="address">
+                       XXXX | XXXXX xxXXXX xXXX xXX | XXXX xXXX XX | XXX XXX <br />
+                      XXXXXXX | XX XXXX 
+                    </div>
+                    <div class="social-icons">
+                        <ul>
+                            <li class="facebook"><a href="https://facebook.com/" target="_blank">Facebook</a></li>
+                            <li class="twitter"><a href="https://twitter.com/@("@")" target="_blank">Twitter</a></li>
+                        </ul>
+                    </div>
+                </address>
+            </div>
+        </div>
+    </footer>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@Scripts.Render("~/bundles/cycle")
+@Scripts.Render("~/bundles/otherjs")
+@RenderSection("scripts", required: false)
+</body>
+</html>
