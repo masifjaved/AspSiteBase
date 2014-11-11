@@ -164,6 +164,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AccountController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ContactController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\ManageController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -210,6 +211,10 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="App_Code\MyHelpers.cshtml" />
+    <Content Include="Areas\Admin\Views\Contact\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Contact\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Contact\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Contact\Edit.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -236,7 +241,7 @@
     <Content Include="Areas\Admin\Views\Shared\Error.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\Home\About.cshtml" />
-    <Content Include="Areas\Admin\Views\Home\Contact.cshtml" />
+    <Content Include="Areas\Admin\Views\Contact\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Areas\Admin\Views\Account\_ChangePasswordPartial.cshtml" />
@@ -287,6 +292,7 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

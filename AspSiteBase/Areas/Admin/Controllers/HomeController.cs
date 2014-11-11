@@ -10,7 +10,6 @@ namespace AspSiteBase.Areas.Admin.Controllers
 {
     public class HomeController : Controller
     {
-        private DatabaseContext DbCon = new DatabaseContext();
 
         [Authorize]
         public ActionResult Index()
@@ -26,13 +25,6 @@ namespace AspSiteBase.Areas.Admin.Controllers
             return View();
         }
 
-        [Authorize]
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            var contacts = DbCon.Contacts;
-            return View(contacts.ToList());
-        }
+      
     }
 }
